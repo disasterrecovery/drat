@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601200150) do
+ActiveRecord::Schema.define(:version => 20130601211454) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,48 @@ ActiveRecord::Schema.define(:version => 20130601200150) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories_recovery_resources", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "recovery_resource_id"
+  end
+
+  add_index "categories_recovery_resources", ["category_id", "recovery_resource_id"], :name => "index_on_cat_id_and_resource_id"
+  add_index "categories_recovery_resources", ["recovery_resource_id"], :name => "index_cats_resources_on_resource_id"
+
+  create_table "disaster_events", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disaster_events_recovery_resources", :id => false, :force => true do |t|
+    t.integer "disaster_event_id"
+    t.integer "recovery_resource_id"
+  end
+
+  add_index "disaster_events_recovery_resources", ["disaster_event_id", "recovery_resource_id"], :name => "index_on_event_id_and_resource_id"
+  add_index "disaster_events_recovery_resources", ["recovery_resource_id"], :name => "index_events_resources_on_resource_id"
+
+  create_table "entity_type_available_tos", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "entity_type_available_tos_recovery_resources", :id => false, :force => true do |t|
+    t.integer "entity_type_available_to_id"
+    t.integer "recovery_resource_id"
+  end
+
+  add_index "entity_type_available_tos_recovery_resources", ["entity_type_available_to_id", "recovery_resource_id"], :name => "index_on_entity_id_and_resource_id"
+  add_index "entity_type_available_tos_recovery_resources", ["recovery_resource_id"], :name => "index_entities_resources_on_resource_id"
 
   create_table "recovery_resources", :force => true do |t|
     t.string   "name"
