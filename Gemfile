@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
+gem 'devise'
+
 gem 'activeadmin'
 gem 'sass-rails'
 gem 'meta_search', '>= 1.1.0.pre'
@@ -15,7 +17,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.3.0'
 
 group :development do
   gem 'pry'
