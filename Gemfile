@@ -14,6 +14,7 @@ gem 'carmen'
 
 gem 'grape'
 gem 'rack-contrib'
+gem "active_model_serializers"
 
 # Gems used only for assets and not required
 # in production environments by default.
