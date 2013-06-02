@@ -6,12 +6,12 @@ module RAT
 
     version 'v1', :using => :path, :format => :json
 
-    #Rescue
+    # Rescue
     rescue_from :all do |e|
       rack_response({:errors => e.message})
     end
 
-    #Resources LookUp by Variety of Params (Index) and ID (Show)
+    # Resources LookUp by Variety of Params (Index) and ID (Show)
     resource :resources do
       desc "Request Resources By Params"
       get do

@@ -1,3 +1,6 @@
+require 'carmen'
+include Carmen
+
 ActiveAdmin.register RecoveryResource do
   menu priority: 2
 
@@ -29,7 +32,7 @@ ActiveAdmin.register RecoveryResource do
     f.inputs 'Details' do
       f.input :name
       f.input :national
-      f.input :state
+      f.input :state, :as => :select, :collection => Country.named('United States').subregions
       f.input :locale
     end
     f.inputs 'Filtering' do
