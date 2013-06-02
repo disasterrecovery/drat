@@ -6,7 +6,6 @@ ActiveAdmin.register RecoveryResource do
     column 'Categories' do |resource|
       list = ''
       for category in resource.categories
-      # resource.categories.each do |category|
         list += "#{category.name}, "
       end
       list.chomp(', ')
