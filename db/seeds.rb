@@ -3,3 +3,7 @@
 
 seed_file = File.join(Rails.root, 'db', 'seed.yml')
 data = YAML::load_file(seed_file)
+
+EntityTypeAvailableTo.create(data['entity_types'])
+Category.create(data['categories'])
+DisasterEvent.create(data['events'])
