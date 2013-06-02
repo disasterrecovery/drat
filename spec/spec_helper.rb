@@ -18,7 +18,7 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  #config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -35,4 +35,20 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+  config.include FactoryGirl::Syntax::Methods
+
+  #Include Api folder in spec/requests
+  config.include RSpec::Rails::RequestExampleGroup, type: :request, example_group: {
+    file_path: /spec\/api/
+  }
+
+  #Database Cleaner Setup
+  config.before :each do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.start
+  end
+
+  config.after :each do
+    DatabaseCleaner.clean
+  end
 end
