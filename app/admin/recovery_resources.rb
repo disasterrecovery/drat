@@ -34,7 +34,7 @@ ActiveAdmin.register RecoveryResource do
       f.input :national
       f.input :state,
         :as => :select,
-        :include_blank => true,
+        :include_blank => '-- None --',
         :collection => Country.named('United States').subregions,
         :member_value => :name
       f.input :locale
