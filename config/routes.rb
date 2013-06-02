@@ -5,4 +5,7 @@ Rat::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  #Api
+  mount RAT::API => '/api'
+
 end
