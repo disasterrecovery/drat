@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :disaster_event do
-    name "MyString"
+    name "Tornado"
   end
 end

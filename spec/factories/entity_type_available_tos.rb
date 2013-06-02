@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :entity_type_available_to do
-    name "MyString"
+    name "State Government"
   end
 end
