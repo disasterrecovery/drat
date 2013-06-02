@@ -14,9 +14,25 @@ ActiveAdmin.register RecoveryResource do
     default_actions
   end
 
+  show do |resource|
+    attributes_table do
+      row :name
+      row :national
+      row :state
+      row :locale
+      # row :categories
+    end
+    active_admin_comments
+  end
+
   form do |f|
-    f.inputs "Details" do
+    f.inputs 'Details' do
       f.input :name
+      f.input :national
+      f.input :state
+      f.input :locale
+    end
+    f.inputs 'Filtering' do
       f.input :categories
       f.input :disaster_events
       f.input :entity_type_available_tos
