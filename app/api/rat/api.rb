@@ -1,11 +1,21 @@
+require 'rack/contrib'
+
 module RAT
   class API < Grape::API
+    use Rack::JSONP
+
     version 'v1', :using => :path, :format => :json
 
+    #Rescue errors
+    rescue_from :all do |e|
+      rack_response({:message => e.message})
+    end
+
+    #Resources LookUp by Variety of Params (Index) and ID (Show)
     resource :resources do
       desc "Request Resources By Params"
       get do
-        RecoveryResource.last
+        RecoveryResource.all
       end
 
       params do
