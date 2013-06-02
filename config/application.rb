@@ -9,7 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module Rat
+module Drat
   class Application < Rails::Application
     # HEROKU
     config.assets.initialize_on_precompile = false

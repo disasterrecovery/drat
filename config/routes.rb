@@ -1,4 +1,4 @@
-Rat::Application.routes.draw do
+Drat::Application.routes.draw do
 
   root :to => 'pages#home'
 

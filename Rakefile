@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rat::Application.load_tasks
+Drat::Application.load_tasks
