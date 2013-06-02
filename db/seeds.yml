@@ -1,3 +1,10 @@
+entity_types:
+  - "The Public (at Large)"
+  - "Private Sector/Businesses"
+  - "Non Governmental Organizations"
+  - "Local Government"
+  - "Tribal Governments"
+  - "State Government"
 categories:
   - "Assistance for Individuals, Households, and Small Businesses"
   - "Behavioral Health"
