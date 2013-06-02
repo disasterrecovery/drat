@@ -33,7 +33,7 @@ class API < Grape::API
     end
     desc "get by id"
     get ':id' do
-      RecoveryResource.includes(:categories).find(params[:id])
+      API::RecoveryResourceSerializer.new(RecoveryResource.includes(:categories).find(params[:id]))
     end
 
   end
