@@ -1,6 +1,6 @@
 require 'rack/contrib'
 
-module RAT
+module DRAT
   class API < Grape::API
     use Rack::JSONP
 

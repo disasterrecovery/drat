@@ -6,6 +6,6 @@ Drat::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   #Api
-  mount RAT::API => '/api'
+  mount DRAT::API => '/api'
 
 end
