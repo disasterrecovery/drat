@@ -14,7 +14,7 @@ gem 'carmen'
 
 gem 'grape'
 gem 'rack-contrib'
-gem "active_model_serializers"
+gem 'active_model_serializers'
 gem 'slim'
 
 # Gems used only for assets and not required
