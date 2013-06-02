@@ -6,9 +6,9 @@ module RAT
 
     version 'v1', :using => :path, :format => :json
 
-    #Rescue errors
+    #Rescue
     rescue_from :all do |e|
-      rack_response({:message => e.message})
+      rack_response({:errors => e.message})
     end
 
     #Resources LookUp by Variety of Params (Index) and ID (Show)
