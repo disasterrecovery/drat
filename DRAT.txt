@@ -1,0 +1,39 @@
+Short Overview
+D.R.A.T.  is a datastore of programs and services that provide technical or financial aid in the event of a disaster. The resources are categorized by the type of aid they provide, their specific region, a specific disaster, and the type of entities the resource provides for.
+
+
+The Challenge
+As we have found in Colorado during wildfire season, and seen recently in disaster areas like Oklahoma, it is difficult to connect people to resources in a time of need. There are many organizations that offer aid to entities like private citizens, businesses, and governments. We were seeking a way to connect the provider to the affected.
+
+
+Description
+Our project is two parts.
+
+The central portion is a database with an API layer. This application contains, tracks, sorts, searches all of the various programs and services available. This is deployed as a demo here: https://drat-demo.herokuapp.com/admin (it contains only a few sample records for testing purposes). And here is a sample call to the API https://drat-demo.herokuapp.com/api/v1/resources.json -- great for developers!
+
+The second part is a sample application that consumes the data provided by the DRAT API. You can see it here: http://jsbin.com/asitiz/2 -- it's incredibly simple, but could be expanded to be very rich with geolocation and a smarter filter.
+
+[Note: these applications shut down when not in use to save resources, so they may take a minute to spin up when first accessed.]
+
+
+How will it have imapct?
+As a centralized, and more importantly *standardized* datastore for programs and services, DRAT can be a canonical source of recovery assistance data.
+This will make it invaluable in a time of need (both immediately after the disaster/event, and the years following). Instead of wading through piecemeal sources, non-standard Excel sheets, and Google searches local governments, non-profits, and even citizens can use an application that consumes DRAT's data to find what they need when they need it most.
+
+
+What's next?
+Data. We're starting with the Department of Public Safety here in Colorado to start populating local and national resources.
+In parallel we're developing sample applications to demonstrate how other developers can build something that works with DRAT's data.
+Beyond that, it would be possible to improve the architecture to handle resource data for other states and expand to a national level.
+
+
+Who?
+Organizations and people affected by a disaster as well as those tasked with aiding in recovery.
+
+
+Help inidividuals?
+Individuals can benefit from the limitless applications of the DRAT dataset. That is, a specific community could easily build and deploy an aid application that tailors the DRAT data to their community (i.e. Colorado Springs can provide a list of up-to-date resources for their area, relating to wildfires, on their website. Citizens could be directed here for help with debris management, financial aid, animal services, etc.)
+
+
+Value for communities, businesses, governments?
+This is where DRAT shines. It aims to standardize the data describing disaster assistance resources, making it universally available and immediate to any community, business, government, developer, and citizen.
