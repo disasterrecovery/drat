@@ -42,6 +42,8 @@ Devise.setup do |config|
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [ :email ]
 
+  config.secret_key = "a7211aa35a1c55cf4134ee03be7a238e0482fe0a8dd34e7e0ad041cbb82ad3f023cd6d4cb3e4525278301fa6df4d6607c8b91cab11c91727929fcea3ef413303"
+
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will
