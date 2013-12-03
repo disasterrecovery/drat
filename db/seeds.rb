@@ -4,7 +4,7 @@
 seed_file = File.join(Rails.root, 'db', 'seed.yml')
 data = YAML::load_file(seed_file)
 
-AdminUser.create!(:email => 'admin@drat.com', :password => 'ch@nge,me!', :password_confirmation => 'ch@nge,me!')
+AdminUser.create!(:email => 'admin@disasterrecovery.io', :password => 'ch@nge,me!', :password_confirmation => 'ch@nge,me!')
 
 EntityTypeAvailableTo.create(data['entity_types'])
 Category.create(data['categories'])
