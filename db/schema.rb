@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602153459) do
+ActiveRecord::Schema.define(:version => 20131215220525) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -87,6 +87,20 @@ ActiveRecord::Schema.define(:version => 20130602153459) do
 
   add_index "entity_type_available_tos_recovery_resources", ["entity_type_available_to_id", "recovery_resource_id"], :name => "index_on_entity_id_and_resource_id"
   add_index "entity_type_available_tos_recovery_resources", ["recovery_resource_id"], :name => "index_entities_resources_on_resource_id"
+
+  create_table "recovery_resource_drafts", :force => true do |t|
+    t.string   "name"
+    t.boolean  "national"
+    t.string   "state"
+    t.string   "locale"
+    t.text     "description"
+    t.boolean  "published"
+    t.integer  "recovery_resource_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  add_index "recovery_resource_drafts", ["recovery_resource_id"], :name => "index_recovery_resource_drafts_on_recovery_resource_id"
 
   create_table "recovery_resources", :force => true do |t|
     t.string   "name"

@@ -11,5 +11,6 @@ class CreateRecoveryResourceDrafts < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :recovery_resource_drafts, :recovery_resource_id
   end
 end
