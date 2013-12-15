@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131215220525) do
+ActiveRecord::Schema.define(:version => 20131215221322) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,6 +52,14 @@ ActiveRecord::Schema.define(:version => 20131215220525) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "categories_recovery_resource_drafts", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "recovery_resource_draft_id"
+  end
+
+  add_index "categories_recovery_resource_drafts", ["category_id", "recovery_resource_draft_id"], :name => "index_on_cat_id_and_draft_id"
+  add_index "categories_recovery_resource_drafts", ["recovery_resource_draft_id"], :name => "index_cats_resources_on_draft_id"
+
   create_table "categories_recovery_resources", :id => false, :force => true do |t|
     t.integer "category_id"
     t.integer "recovery_resource_id"
@@ -66,6 +74,14 @@ ActiveRecord::Schema.define(:version => 20131215220525) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "disaster_events_recovery_resource_drafts", :id => false, :force => true do |t|
+    t.integer "disaster_event_id"
+    t.integer "recovery_resource_draft_id"
+  end
+
+  add_index "disaster_events_recovery_resource_drafts", ["disaster_event_id", "recovery_resource_draft_id"], :name => "index_on_event_id_and_draft_id"
+  add_index "disaster_events_recovery_resource_drafts", ["recovery_resource_draft_id"], :name => "index_events_resources_on_draft_id"
+
   create_table "disaster_events_recovery_resources", :id => false, :force => true do |t|
     t.integer "disaster_event_id"
     t.integer "recovery_resource_id"
@@ -79,6 +95,14 @@ ActiveRecord::Schema.define(:version => 20131215220525) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "entity_type_available_tos_recovery_resource_drafts", :id => false, :force => true do |t|
+    t.integer "entity_type_available_to_id"
+    t.integer "recovery_resource_draft_id"
+  end
+
+  add_index "entity_type_available_tos_recovery_resource_drafts", ["entity_type_available_to_id", "recovery_resource_draft_id"], :name => "index_on_entity_id_and_draft_id"
+  add_index "entity_type_available_tos_recovery_resource_drafts", ["recovery_resource_draft_id"], :name => "index_entities_resources_on_draft_id"
 
   create_table "entity_type_available_tos_recovery_resources", :id => false, :force => true do |t|
     t.integer "entity_type_available_to_id"
