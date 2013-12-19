@@ -1,21 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 3.2'
-
 gem 'pg'
-
 gem 'devise'
-
 gem 'activeadmin'
 gem 'sass-rails'
 gem 'meta_search', '>= 1.1.0.pre'
-
 gem 'carmen'
-
 gem 'grape'
 gem 'rack-contrib'
 gem 'active_model_serializers'
 gem 'slim'
+gem 'capistrano', '~> 3.0.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
