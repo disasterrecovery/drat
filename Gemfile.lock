@@ -58,6 +58,12 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 0.0.23)
+    capistrano-bundler (1.1.1)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2.0)
+    capistrano-rails (1.1.0)
+      capistrano (>= 3.0.0)
+      capistrano-bundler (>= 1.0.0)
     carmen (1.0.0)
       unicode_utils (~> 1.4.0)
     coderay (1.1.0)
@@ -243,6 +249,7 @@ DEPENDENCIES
   active_model_serializers
   activeadmin
   capistrano (~> 3.0.1)
+  capistrano-rails (~> 1.1)
   carmen
   coffee-rails (~> 3.2.1)
   database_cleaner
