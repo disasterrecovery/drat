@@ -11,8 +11,11 @@ gem 'grape'
 gem 'rack-contrib'
 gem 'active_model_serializers'
 gem 'slim'
+gem 'unicorn'
 gem 'capistrano', '~> 3.0.1'
 gem 'capistrano-rails', '~> 1.1'
+gem 'rvm1-capistrano3', require: false
+
 
 # Gems used only for assets and not required
 # in production environments by default.
