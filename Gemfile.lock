@@ -64,8 +64,6 @@ GEM
     capistrano-rails (1.1.0)
       capistrano (>= 3.0.0)
       capistrano-bundler (>= 1.0.0)
-    capistrano-rvm (0.0.3)
-      capistrano
     carmen (1.0.0)
       unicode_utils (~> 1.4.0)
     coderay (1.1.0)
@@ -202,6 +200,9 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    rvm1-capistrano3 (1.1.1)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -258,7 +259,6 @@ DEPENDENCIES
   activeadmin
   capistrano (~> 3.0.1)
   capistrano-rails (~> 1.1)
-  capistrano-rvm
   carmen
   coffee-rails (~> 3.2.1)
   database_cleaner
@@ -274,6 +274,7 @@ DEPENDENCIES
   rails (~> 3.2)
   rspec
   rspec-rails
+  rvm1-capistrano3
   sass-rails
   shoulda-matchers
   slim
