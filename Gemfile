@@ -29,7 +29,6 @@ gem 'jquery-rails'
 group :development do
   gem 'pry'
   gem 'pry-rails'
-  gem 'capistrano-unicorn', :require => false
 end
 
 group :test, :development do
