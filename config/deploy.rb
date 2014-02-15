@@ -13,10 +13,10 @@ set :linked_files, %w{config/database.yml}
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
-set :default_env, { rvm_bin_path: '~/.rvm/bin' }
+#set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :rvm_ruby_string, 'ruby-1.9.3'
-set :rvm_bin_path, '/usr/local/rvm/bin'
-set :rvm_type, :system
+set :rvm_bin_path, '/home/rails/.rvm/bin'
+set :rvm_type, :user
 
 set :keep_releases, 3
 
