@@ -12,11 +12,6 @@ gem 'rack-contrib'
 gem 'active_model_serializers'
 gem 'slim'
 gem 'unicorn'
-gem 'capistrano', '~> 3.0.1'
-gem 'capistrano-rails', '~> 1.1'
-gem 'capistrano-bundler', '>= 1.1.0'
-#gem 'capistrano-rvm', git: 'git@github.com:capistrano/rvm.git'
-gem 'rvm1-capistrano3', require: false
 
 
 # Gems used only for assets and not required
@@ -31,6 +26,7 @@ gem 'jquery-rails'
 group :development do
   gem 'pry'
   gem 'pry-rails'
+  gem 'rvm-capistrano'
 end
 
 group :test, :development do

@@ -58,12 +58,6 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 0.0.23)
-    capistrano-bundler (1.1.1)
-      capistrano (~> 3.0)
-      sshkit (>= 1.2.0)
-    capistrano-rails (1.1.0)
-      capistrano (>= 3.0.0)
-      capistrano-bundler (>= 1.0.0)
     carmen (1.0.0)
       unicode_utils (~> 1.4.0)
     coderay (1.1.0)
@@ -200,9 +194,8 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rvm1-capistrano3 (1.1.1)
-      capistrano (~> 3.0)
-      sshkit (>= 1.2)
+    rvm-capistrano (1.5.0)
+      capistrano (>= 2.15.4)
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -257,9 +250,6 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   activeadmin
-  capistrano (~> 3.0.1)
-  capistrano-bundler (>= 1.1.0)
-  capistrano-rails (~> 1.1)
   carmen
   coffee-rails (~> 3.2.1)
   database_cleaner
@@ -275,7 +265,7 @@ DEPENDENCIES
   rails (~> 3.2)
   rspec
   rspec-rails
-  rvm1-capistrano3
+  rvm-capistrano
   sass-rails
   shoulda-matchers
   slim
