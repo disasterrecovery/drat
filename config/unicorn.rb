@@ -24,7 +24,7 @@ else
   # Hard-set the CWD & pidfile to ensure app-reloading consistency
   working_directory "#{app_path}/current"
   #stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
-  pid "#{app_path}/current/tmp/pids/unicorn.pid"
+  pid "/home/unicorn/pids/unicorn.pid"
 
   # Helps ensure the correct unicorn binary is used when upgrading with USR2
   # See http://unicorn.bogomips.org/Sandbox.html
