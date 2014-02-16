@@ -14,8 +14,9 @@ gem 'slim'
 gem 'unicorn'
 gem 'capistrano', '~> 3.0.1'
 gem 'capistrano-rails', '~> 1.1'
-#gem 'capistrano-rvm'
-gem 'rvm1-capistrano3', require: false
+gem 'capistrano-bundler', '>= 1.1.0'
+gem 'capistrano-rvm', git: 'git@github.com:capistrano/rvm.git'
+#gem 'rvm1-capistrano3', require: false
 
 
 # Gems used only for assets and not required
