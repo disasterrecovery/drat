@@ -26,7 +26,6 @@ gem 'jquery-rails'
 group :development do
   gem 'pry'
   gem 'pry-rails'
-  gem 'rvm-capistrano'
 end
 
 group :test, :development do
