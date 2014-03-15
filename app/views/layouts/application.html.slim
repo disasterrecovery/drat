@@ -1,13 +1,13 @@
 doctype html
 html
   head
-  title Recovery Assistance Tool
-  meta name="keywords" content=""
-  meta name="author" content=""
+    title Recovery Assistance Tool
+    meta name="keywords" content=""
+    meta name="author" content=""
 
-  = stylesheet_link_tag "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
   body
     = render partial: 'shared/flash', locals: {flash: flash} if flash.present?
